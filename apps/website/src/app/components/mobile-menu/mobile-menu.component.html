@@ -1,12 +1,12 @@
 
-<div class="absolute z-40 top-0 w-screen h-screen mt-16 flex">
+<div [ngClass]="{'hidden': !visible}" class="absolute z-40 top-0  transition-[display] ease-in delay-500 w-screen h-screen mt-20 flex">
   <ul class="flex flex-col border-t-4  divide-y divide-solid space-y-8x bg-white h-screen w-3/4 container  px-4">
-    <li routerLink='/' [routerLinkActiveOptions]="{exact: true}"  routerLinkActive='lc-active-mobile-link' class="lc-mobile-links">
+    <li routerLink='/' (isActiveChange)="onActiveChange()"  [routerLinkActiveOptions]="{exact: true}"  routerLinkActive='lc-active-mobile-link' class="lc-mobile-links">
       <a >Home</a>
     </li>
-    <li routerLink='/about' [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-mobile-link' class="lc-mobile-links "><a>About Us</a></li>
-    <li routerLink='/services' [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-mobile-link' class="lc-mobile-links" ><a >Services</a></li>
-    <li routerLink='/contact' [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-mobile-link' class="lc-mobile-links"><a>Contact Us</a></li>
+    <li routerLink='/about' (isActiveChange)="onActiveChange()"  [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-mobile-link' class="lc-mobile-links "><a>About Us</a></li>
+    <li routerLink='/services' (isActiveChange)="onActiveChange()"  [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-mobile-link' class="lc-mobile-links" ><a >Services</a></li>
+    <li routerLink='/contact' (isActiveChange)="onActiveChange()"  [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-mobile-link' class="lc-mobile-links"><a>Contact Us</a></li>
   </ul>
-  <div class="h-screen bg-gray-900 opacity-80 w-1/4"></div>
+  <div class="h-screen bg-gray-900 opacity-80 w-1/4" (click)="toggleVisibility()"></div>
 </div>

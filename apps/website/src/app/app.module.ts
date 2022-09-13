@@ -12,6 +12,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.component';
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.compon
     ContactComponent,
     MobileMenuComponent,
   ],
-  imports: [BrowserModule, RoutingModule],
+  imports: [BrowserModule, RoutingModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

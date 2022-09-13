@@ -1,10 +1,12 @@
-<header class="shadow-lg h-18 z-50">
+<header class="shadow-lg h-20 z-50 fixed w-screen bg-white flex flex-col items-center justify-center">
   <div class="container  px-4 py-4 md:mx-auto flex justify-between items-center">
     <div class="w-36">
       <img src="../../../assets/images/logo.png" alt="logo">
     </div>
 
-    <button class="lg:hidden"><span class="fe fe-menu text-black fa-2x"></span></button>
+    <button (click)="toggleMenu()" class="lg:hidden">
+      <span [ngClass]="{'fe-menu': !showMobileMenu, 'fe-x': showMobileMenu}"
+            class="fe transition-transform rotate-45 text-black fa-2x"></span></button>
     <div class='hidden lg:block'>
       <ul class="flex py-2 text-lg text-gray-800 font-medium space-x-10">
         <li routerLink='/' [routerLinkActiveOptions]="{exact: true}"  routerLinkActive='lc-active-link' class="lc-links">

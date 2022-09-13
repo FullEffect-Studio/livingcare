@@ -2,7 +2,13 @@
 module.exports = {
   content: ['./apps/**/*.{html,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+        'display': 'block, hidden'
+      }
+    },
   },
 
   daisyui: {
