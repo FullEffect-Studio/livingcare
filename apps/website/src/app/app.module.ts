@@ -5,6 +5,12 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './core/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { RoutingModule } from './routing.module';
+import { AboutComponent } from './pages/about/about.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -12,8 +18,12 @@ import { FooterComponent } from './components/footer/footer.component';
     LayoutComponent,
     HeaderComponent,
     FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    ServicesComponent,
+    ContactComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, RoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
