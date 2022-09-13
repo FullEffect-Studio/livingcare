@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'livingcare-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  template: `
+    <main>
+      <livingcare-layout></livingcare-layout>
+    </main>
+  `,
 })
 export class AppComponent {
-  title = 'website';
+
 }
