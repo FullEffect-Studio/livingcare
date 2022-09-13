@@ -11,6 +11,7 @@ import { RoutingModule } from './routing.module';
 import { AboutComponent } from './pages/about/about.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     AboutComponent,
     ServicesComponent,
     ContactComponent,
+    MobileMenuComponent,
   ],
   imports: [BrowserModule, RoutingModule],
   providers: [],

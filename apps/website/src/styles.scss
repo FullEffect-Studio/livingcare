@@ -22,25 +22,34 @@
 //  --transition-speed: 600ms;
 //}
 //
-//@layer base {
-//  *::-webkit-scrollbar {
-//    width: 0.25rem;
-//  }
-//
-//  *::-webkit-scrollbar-track {
-//    background: #7f888d;
-//  }
-//
-//  *::-webkit-scrollbar-thumb {
-//    background: #BF7104;
-//  }
-//}
+@layer base {
+  *::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #7f888d;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #BF7104;
+  }
+}
 
 @layer components {
   .lc-active-link {
-    @apply border-b-4 border-green-500 font-bold;
+    @apply border-b-4 border-primary font-bold;
   }
+
+  .lc-active-mobile-link {
+    @apply font-bold;
+  }
+
   .lc-links{
-    @apply hover:text-green-500 transition-all ease-out delay-100 cursor-pointer font-semibold text-black;
+    @apply hover:text-green-500 transition-all ease-out delay-100 cursor-pointer font-semibold text-black ;
+  }
+
+  .lc-mobile-links{
+    @apply hover:text-primary transition-all ease-out delay-100 cursor-pointer text-black py-4 font-bold;
   }
 }
