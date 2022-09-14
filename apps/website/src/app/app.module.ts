@@ -13,6 +13,16 @@ import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.component';
 import {SharedModule} from "./shared/shared.module";
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NzCarouselModule} from "ng-zorro-antd/carousel";
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -26,8 +36,10 @@ import {SharedModule} from "./shared/shared.module";
     ContactComponent,
     MobileMenuComponent,
   ],
-  imports: [BrowserModule, RoutingModule, SharedModule],
-  providers: [],
+  imports: [BrowserModule, RoutingModule, SharedModule, FormsModule, HttpClientModule, BrowserAnimationsModule, NzCarouselModule],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

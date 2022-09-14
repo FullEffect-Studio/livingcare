@@ -1,20 +1,20 @@
-<header class="shadow-lg h-20 z-50 fixed w-screen bg-white flex flex-col items-center justify-center">
+<header class="shadow-lg h-20 z-50 fixed w-screen bg-white opacity-80 flex flex-col items-center justify-center">
   <div class="container  px-4 py-4 md:mx-auto flex justify-between items-center">
-    <div class="w-36">
+    <div class="w-36 lg:w-40">
       <img src="../../../assets/images/logo.png" alt="logo">
     </div>
 
     <button (click)="toggleMenu()" class="lg:hidden">
-      <span [ngClass]="{'fe-menu': !showMobileMenu, 'fe-x': showMobileMenu}"
-            class="fe transition-transform rotate-45 text-black fa-2x"></span></button>
+      <span [ngClass]="{'fe-menu animate__animated  animate__slideInLeft': !showMobileMenu, 'fe-x': showMobileMenu}"
+            class="fe transition-transform rotate-45   text-black fa-2x"></span></button>
     <div class='hidden lg:block'>
-      <ul class="flex py-2 text-lg text-gray-800 font-medium space-x-10">
+      <ul class="flex py-2 text-lg text-gray-900x font-mediumx space-x-10">
         <li routerLink='/' [routerLinkActiveOptions]="{exact: true}"  routerLinkActive='lc-active-link' class="lc-links">
-          <a >Home</a>
+          Home
         </li>
-        <li routerLink='/about' [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-link' class="lc-links"><a>About Us</a></li>
-        <li routerLink='/services' [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-link' class="lc-links"><a >Services</a></li>
-        <li routerLink='/contact' [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-link' class="lc-links"><a>Contact Us</a></li>
+        <li routerLink='/about' [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-link' class="lc-links">About Us</li>
+        <li routerLink='/services' [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-link' class="lc-links">Services</li>
+        <li routerLink='/contact' [routerLinkActiveOptions]="{exact: true}" routerLinkActive='lc-active-link' class="lc-links">Contact Us</li>
       </ul>
     </div>
 

@@ -22,6 +22,7 @@
     "@nrwl/angular": "14.7.5",
     "animate.css": "^4.1.1",
     "daisyui": "^2.27.0",
+    "ng-zorro-antd": "^14.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

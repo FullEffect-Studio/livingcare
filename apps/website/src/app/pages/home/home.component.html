@@ -1,3 +1,59 @@
-<div class="bg-[url('/assets/images/homehealxthcare.jpg')] bg-center h-screen">
+<div>
+  <nz-carousel  nzAutoPlay [nzEnableSwipe]="true" class="h-96 lg:h-screen">
+    <div nz-carousel-content  >
+      <div [ngStyle]="{backgroundImage: 'url(/assets/images/slide'+1+'.jpg)'}" [ngClass]="' h-96 lg:h-screen bg-cover bg-right bg-right bg-gray-100 '">
+        <div class="w-full h-full container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 pb-10 lg:pb-60  ">
+            <div class="flex flex-col justify-end space-y-10 h-full">
+              <div class="hidden lg:block border-l-8 border-primary font-bold text-xl pl-4 animate__animated  animate__fadeInDown">Living Care Family Service</div>
+              <div class="hidden lg:block  text-5xl font-bold animate__animated  animate__fadeInDown">We will provide your parents a healthy life</div>
+              <div class="space-x-2 lg:space-x-8 flex justify-center mt-56 animate__animated  animate__fadeInDown lg:justify-start">
+                <button class="btn btn-md lg:btn-lg btn-primary capitalize">About us</button>
+                <button class="btn btn-md lg:btn-lg  capitalize shadow-xl">Call us</button>
+              </div>
+            </div>
+            <div class="col-span-3 hidden lg:block"></div>
+        </div>
+      </div>
+    </div>
 
+
+    <div nz-carousel-content  class="">
+      <div [ngStyle]="{backgroundImage: 'url(/assets/images/slide'+2+'.jpg)'}" [ngClass]="'h-96 lg:h-screen bg-cover bg-right bg-gray-100 '">
+        <div class="w-full h-full container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 pb-10 lg:pb-60">
+          <div class="flex flex-col justify-end space-y-10 h-full">
+            <div class="hidden lg:block border-l-8 border-primary animate__animated  animate__fadeInDown font-bold text-xl pl-4">Living Care Family Service</div>
+            <div class="hidden lg:block  text-5xl font-bold">We do our best for you and your health</div>
+            <div class="space-x-2 lg:space-x-8 flex justify-center mt-56 animate__animated  animate__fadeInDown lg:justify-start">
+              <button class="btn btn-md lg:btn-lg btn-primary capitalize">About us</button>
+              <button class="btn btn-md lg:btn-lg  capitalize shadow-xl">Call us</button>
+            </div>
+          </div>
+          <div class="col-span-3  hidden lg:block" ></div>
+        </div>
+      </div>
+    </div>
+
+    <div nz-carousel-content  class="">
+      <div [ngStyle]="{backgroundImage: 'url(/assets/images/slide'+3+'.jpg)'}" [ngClass]="'h-96 lg:h-screen bg-cover bg-right bg-gray-100'">
+        <div class="w-full h-full container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 pb-10 lg:pb-60">
+          <div class="flex flex-col justify-end space-y-10 h-full">
+            <div class="hidden lg:block border-l-8 border-primary font-bold text-xl pl-4">Living Care Family Service</div>
+            <div class="hidden lg:block  text-5xl font-bold animate__animated  animate__fadeInDown">Correct diagnosis is half the success</div>
+            <div class="space-x-2 lg:space-x-8 flex justify-center mt-56 animate__animated  animate__fadeInDown lg:justify-start">
+              <button class="btn btn-md lg:btn-lg btn-primary capitalize">About us</button>
+              <button class="btn btn-md lg:btn-lg  capitalize shadow-xl">Call us</button>
+            </div>
+          </div>
+          <div class="col-span-3  hidden lg:block"></div>
+        </div>
+      </div>
+    </div>
+
+  </nz-carousel>
+  <div class="bg-gray-800 h-56">
+    <div class="container mx-auto">
+      <div class="text-white py-20 text-2xl">Why Choose Us?</div>
+    </div>
+  </div>
 </div>
+
