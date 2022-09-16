@@ -6,9 +6,9 @@
 
     <button (click)="toggleMenu()" class="lg:hidden">
       <span [ngClass]="{'fe-menu animate__animated  animate__slideInLeft': !showMobileMenu, 'fe-x': showMobileMenu}"
-            class="fe transition-transform rotate-45   text-black fa-2x"></span></button>
+            class="fe transition-transform rotate-45  text-black fa-2x"></span></button>
     <div class='hidden lg:block'>
-      <ul class="flex py-2 text-lg text-gray-900x font-mediumx space-x-10">
+      <ul class="flex py-2 text-base text-gray-900x font-mediumx space-x-10">
         <li routerLink='/' [routerLinkActiveOptions]="{exact: true}"  routerLinkActive='lc-active-link' class="lc-links">
           Home
         </li>

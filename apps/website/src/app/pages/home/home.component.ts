@@ -8,7 +8,7 @@ import {BehaviorSubject, combineLatest, combineLatestAll, map, Observable} from 
 })
 export class HomeComponent implements OnInit {
   array = [1, 2, 3];
-  selectedService = new BehaviorSubject<ServiceID>(ServiceID.ElderPeople)
+  selectedService = new BehaviorSubject<ServiceID>(ServiceID.MonitoringAndDiagnostics)
   services = new BehaviorSubject<Service[]>(servicesListData);
   subServices = new BehaviorSubject<SubService[]>(subServicesListData)
 

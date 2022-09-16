@@ -54,7 +54,7 @@
   }
 
   .lc-links{
-    @apply hover:text-primary transition-all ease-out delay-100 cursor-pointer font-semibold text-black ;
+    @apply h-8 hover:text-primary transition-all ease-out delay-100 cursor-pointer font-semibold text-black ;
   }
 
   .lc-mobile-links{
