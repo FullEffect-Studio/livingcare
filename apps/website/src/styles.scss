@@ -55,6 +55,13 @@
   .lc-mobile-links{
     @apply hover:text-primary transition-all ease-out delay-100 cursor-pointer text-black py-4 font-bold;
   }
+
+
+  .feature:hover  figure{
+    @apply scale-125 delay-100 transition-all ease-out;
+  }
+
+
 }
 
 
