@@ -21,8 +21,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
-import { ElderPeopleComponent } from './pages/home/services/elder-people/elder-people.component';
-import { MonitoringDiagnosticsComponent } from './pages/home/services/monitoring-diagnostics/monitoring-diagnostics.component';
 
 registerLocaleData(en);
 
@@ -37,8 +35,6 @@ registerLocaleData(en);
     ServicesComponent,
     ContactComponent,
     MobileMenuComponent,
-    ElderPeopleComponent,
-    MonitoringDiagnosticsComponent,
   ],
   imports: [
     BrowserModule,

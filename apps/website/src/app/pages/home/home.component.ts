@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {BehaviorSubject, combineLatest, combineLatestAll, map, Observable} from "rxjs";
 
 @Component({
   selector: 'livingcare-home',
@@ -7,23 +8,38 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   array = [1, 2, 3];
-  services = servicesListData;
+  selectedService = new BehaviorSubject<ServiceID>(ServiceID.ElderPeople)
+  services = new BehaviorSubject<Service[]>(servicesListData);
+  subServices = new BehaviorSubject<SubService[]>(subServicesListData)
+
+  viewModel$:Observable<SubService[]> = combineLatest([
+    this.selectedService,
+    this.subServices
+  ]).pipe(
+    map(([selected, subService]) => {
+      return subService.filter(e => e.serviceId === selected)
+    })
+  )
+
   constructor() {}
 
 
 
 
   ngOnInit(): void {}
+
+  onSelectedServiceChanged(id: number) {
+    this.selectedService.next(id);
+  }
 }
 
-interface Service{
+export interface Service{
   id: number
   label: string
   url: string
 }
 
-interface  SubService{
-  id: number,
+export interface  SubService{
   serviceId: number
   imageUrl: string
   label: string
@@ -63,7 +79,6 @@ const servicesListData:Service[] = [
 
 const subServicesListData: SubService[] = [
   {
-    id: 1,
     serviceId: ServiceID.ElderPeople,
     imageUrl: 'assets/images/medical_care.jpg',
     label: 'Medical care and care',
@@ -71,7 +86,6 @@ const subServicesListData: SubService[] = [
     link: ''
   },
   {
-    id: 2,
     serviceId: ServiceID.ElderPeople,
     imageUrl: 'assets/images/care_and_help.jpg',
     label: 'Care and help at home',
@@ -79,7 +93,6 @@ const subServicesListData: SubService[] = [
     link: ''
   },
   {
-    id: 3,
     serviceId: ServiceID.ElderPeople,
     imageUrl: 'assets/images/specialized_care.jpg',
     label: 'Specialized Care',
@@ -88,16 +101,21 @@ const subServicesListData: SubService[] = [
   },
 
   {
-    id: 4,
     serviceId: ServiceID.MonitoringAndDiagnostics,
     imageUrl: 'assets/images/specialized_care.jpg',
     label: 'Specialized Care',
     summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
     link: ''
   },
+  {
+    serviceId: ServiceID.MonitoringAndDiagnostics,
+    imageUrl: 'assets/images/doctors_visit.jpg',
+    label: "Doctor's visit to the house",
+    summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
+    link: ''
+  },
 
   {
-    id: 5,
     serviceId: ServiceID.PeopleWithDisabilties,
     imageUrl: 'assets/images/specialized_care.jpg',
     label: 'Specialized Care',
@@ -106,10 +124,16 @@ const subServicesListData: SubService[] = [
   },
 
   {
-    id: 6,
     serviceId: ServiceID.RehabilitationAndRecovery,
     imageUrl: 'assets/images/specialized_care.jpg',
     label: 'Specialized Care',
+    summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
+    link: ''
+  },
+  {
+    serviceId: ServiceID.RehabilitationAndRecovery,
+    imageUrl: 'assets/images/doctors_visit.jpg',
+    label: "Doctor's visit to the house",
     summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
     link: ''
   },
