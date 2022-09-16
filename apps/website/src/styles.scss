@@ -24,7 +24,12 @@
 //
 //  --transition-speed: 600ms;
 //}
-//
+
+:root {
+  --animate-duration: 300ms;
+  --animate-delay: 0.9s;
+}
+
 @layer base {
   *::-webkit-scrollbar {
     width: 0.25rem;
@@ -59,6 +64,15 @@
 
   .feature:hover  figure{
     @apply scale-125 delay-100 transition-all ease-out;
+  }
+
+
+  .team-member:hover  .desc{
+    @apply block animate__animated animate__zoomIn ;
+  }
+
+  .team-member:hover  img{
+    @apply transition-all ease-in;
   }
 
 
