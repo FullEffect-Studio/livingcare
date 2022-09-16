@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'livingcare-home',
@@ -12,5 +12,13 @@ export class HomeComponent implements OnInit {
 
 
 
+
   ngOnInit(): void {}
 }
+
+interface Service{
+  id: number
+  name: string
+}
+
+

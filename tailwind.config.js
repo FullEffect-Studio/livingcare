@@ -19,6 +19,9 @@ module.exports = {
           primary: "#06a9b2",
           "primary-focus": "#05666c",
           'primary-content': '#ffffff',
+          secondary: '#2c3a5f',
+          'secondary-focus': '#172038',
+          'secondary-content': '#ffffff',
           accent: '#f29e22',
           'accent-focus': '#734300',
           'accent-content': '#ffffff',
@@ -31,6 +34,7 @@ module.exports = {
           'base-content': '#291334'
         },
         lightx: {
+// #2c3a5f
           // secondary: '#ef9fbc' /* Secondary color */,
           // 'secondary-focus': '#e8739e' /* Secondary color - focused */,
           // 'secondary-content':

@@ -10,12 +10,26 @@ import {HomeComponent} from "./pages/home/home.component";
 import {AboutComponent} from "./pages/about/about.component";
 import {ServicesComponent} from "./pages/services/services.component";
 import {ContactComponent} from "./pages/contact/contact.component";
+import {ElderPeopleComponent} from "./pages/home/services/elder-people/elder-people.component";
+import {
+  MonitoringDiagnosticsComponent
+} from "./pages/home/services/monitoring-diagnostics/monitoring-diagnostics.component";
 
 const routes: Routes = [
 
   {
     path: '',
     component: HomeComponent,
+    children: [
+      {
+        path: 'elder-people',
+        component: ElderPeopleComponent
+      },
+      {
+        path: 'monitoring-diagonostics',
+        component: MonitoringDiagnosticsComponent
+      }
+    ]
   },
   {
     path: 'about',

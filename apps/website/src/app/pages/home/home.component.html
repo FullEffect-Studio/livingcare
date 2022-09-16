@@ -1,59 +1,145 @@
 <div>
-  <nz-carousel  nzAutoPlay [nzEnableSwipe]="true" class="h-96 lg:h-screen">
-    <div nz-carousel-content  >
-      <div [ngStyle]="{backgroundImage: 'url(/assets/images/slide'+1+'.jpg)'}" [ngClass]="' h-96 lg:h-screen bg-cover bg-right bg-right bg-gray-100 '">
-        <div class="w-full h-full container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 pb-10 lg:pb-60  ">
+  <!--  Carousel  -->
+  <section>
+    <nz-carousel  nzAutoPlay [nzEnableSwipe]="true" class="h-96 lg:h-screen">
+      <div nz-carousel-content  >
+        <div [ngStyle]="{backgroundImage: 'url(/assets/images/slide'+1+'.jpg)'}" [ngClass]="' h-96 lg:h-screen bg-cover bg-right bg-right bg-gray-100 '">
+          <div class="w-full h-full container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 pb-10 lg:pb-40  ">
             <div class="flex flex-col justify-end space-y-10 h-full">
-              <div class="hidden lg:block border-l-8 border-primary font-bold text-xl pl-4 animate__animated  animate__fadeInDown">Living Care Family Service</div>
-              <div class="hidden lg:block  text-5xl font-bold animate__animated  animate__fadeInDown">We will provide your parents a healthy life</div>
+              <div class="hidden lg:block border-l-8 border-primary font-semibold text-xl pl-4 animate__animated  animate__fadeInDown">Living Care Family Service</div>
+              <div class="hidden lg:block  text-4xl font-semibold animate__animated  animate__fadeInDown">We will provide your parents a healthy life</div>
               <div class="space-x-2 lg:space-x-8 flex justify-center mt-56 animate__animated  animate__fadeInDown lg:justify-start">
                 <button class="btn btn-md lg:btn-lg btn-primary capitalize">About us</button>
                 <button class="btn btn-md lg:btn-lg  capitalize shadow-xl">Call us</button>
               </div>
             </div>
             <div class="col-span-3 hidden lg:block"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div nz-carousel-content *ngIf="false" class="">
+        <div [ngStyle]="{backgroundImage: 'url(/assets/images/slide'+2+'.jpg)'}" [ngClass]="'h-96 lg:h-screen bg-cover bg-right bg-gray-100 '">
+          <div class="w-full h-full container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 pb-10 lg:pb-60">
+            <div class="flex flex-col justify-end space-y-10 h-full">
+              <div class="hidden lg:block border-l-8 border-primary animate__animated  animate__fadeInDown font-bold text-xl pl-4">Living Care Family Service</div>
+              <div class="hidden lg:block  text-5xl font-bold">We do our best for you and your health</div>
+              <div class="space-x-2 lg:space-x-8 flex justify-center mt-56 animate__animated  animate__fadeInDown lg:justify-start">
+                <button class="btn btn-md lg:btn-lg btn-primary capitalize">About us</button>
+                <button class="btn btn-md lg:btn-lg  capitalize shadow-xl">Call us</button>
+              </div>
+            </div>
+            <div class="col-span-3  hidden lg:block" ></div>
+          </div>
+        </div>
+      </div>
+
+      <div nz-carousel-content *ngIf="false" class="">
+        <div [ngStyle]="{backgroundImage: 'url(/assets/images/slide'+3+'.jpg)'}" [ngClass]="'h-96 lg:h-screen bg-cover bg-right bg-gray-100'">
+          <div class="w-full h-full container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 pb-10 lg:pb-60">
+            <div class="flex flex-col justify-end space-y-10 h-full">
+              <div class="hidden lg:block border-l-8 border-primary font-bold text-xl pl-4">Living Care Family Service</div>
+              <div class="hidden lg:block  text-5xl font-bold animate__animated  animate__fadeInDown">Correct diagnosis is half the success</div>
+              <div class="space-x-2 lg:space-x-8 flex justify-center mt-56 animate__animated  animate__fadeInDown lg:justify-start">
+                <button class="btn btn-md lg:btn-lg btn-primary capitalize">About us</button>
+                <button class="btn btn-md lg:btn-lg  capitalize shadow-xl">Call us</button>
+              </div>
+            </div>
+            <div class="col-span-3  hidden lg:block"></div>
+          </div>
+        </div>
+      </div>
+
+    </nz-carousel>
+  </section>
+
+  <!--  Why choose us -->
+  <section class="bg-secondary ">
+    <div class="container mx-auto px-8 pt-20 pb-28 grid grid-cols-3 items-center justify-center gap-8 lg:gap-32 space-y-0">
+      <div class="col-span-3 lg:col-span-1">
+       <div class="text-white font-black text-3xl">Why Choose Us?</div>
+       <div class="w-10 border-t-4 mt-4 lg:mt-8  border-primary"></div>
+     </div>
+      <div class="text-white/90 text-base lg:text-xl col-span-3  leading-loose tracking-wider lg:col-span-1 ">
+        Nunc purus sodales quis, purus a arcu, ultricies dui, ipsum eget, massa metus sed. Odio arcu dolor, facilisis adipiscing nam mauris suspendisse.
+      </div>
+      <div class="flex gap-8 col-span-3 lg:col-span-1">
+        <div><span class="fe fe-phone-call text-primary fa-3x"></span></div>
+        <div class="text-white/80 text-lg lg:text-xl font-bold space-y-4 ">
+          <div>Booking now</div>
+          <div>24/7 service available</div>
+          <div>+233 (0) 24 031 3771</div>
         </div>
       </div>
     </div>
+  </section>
 
+  <!--  Services  -->
+  <section class="">
+    <div class="container mx-auto px-8 py-16 lg:py-32 grid grid-cols-1 lg:grid-cols-3 items-start  gap-8 lg:gap-16 space-y-0">
+      <!-- Service Categories      -->
+        <div class="p-8 space-y-8 card w-full bg-base-100 col-span-3 lg:col-span-1  shadow-xl" >
+          <div class="pl-4">
+            <div class="font-black text-3xl">Services</div>
+            <div class="w-10 border-t-4 mt-2 lg:mt-8  border-primary"></div>
+          </div>
+          <ul class="space-y-4 list-outside">
+            <li class="flex items-center hover:text-primary cursor-pointer"><span class="fe fe-chevron-right font-bold text-lg text-primary"></span> <span class="font-semibold text-lg">For the elderly people</span></li>
+            <li class="flex items-center hover:text-primary cursor-pointer"><span class="fe fe-chevron-right font-bold text-lg text-primary"></span> <span class="font-semibold text-lg">Monitoring & Diagnostics</span></li>
+            <li class="flex items-center hover:text-primary cursor-pointer"><span class="fe fe-chevron-right font-bold text-lg text-primary"></span> <span class="font-semibold text-lg">People with Disabilities</span></li>
+            <li class="flex items-center hover:text-primary cursor-pointer"><span class="fe fe-chevron-right font-bold text-lg text-primary"></span> <span class="font-semibold text-lg">Rehabilitation and recovery</span></li>
+          </ul>
+        </div>
 
-    <div nz-carousel-content  class="">
-      <div [ngStyle]="{backgroundImage: 'url(/assets/images/slide'+2+'.jpg)'}" [ngClass]="'h-96 lg:h-screen bg-cover bg-right bg-gray-100 '">
-        <div class="w-full h-full container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 pb-10 lg:pb-60">
-          <div class="flex flex-col justify-end space-y-10 h-full">
-            <div class="hidden lg:block border-l-8 border-primary animate__animated  animate__fadeInDown font-bold text-xl pl-4">Living Care Family Service</div>
-            <div class="hidden lg:block  text-5xl font-bold">We do our best for you and your health</div>
-            <div class="space-x-2 lg:space-x-8 flex justify-center mt-56 animate__animated  animate__fadeInDown lg:justify-start">
-              <button class="btn btn-md lg:btn-lg btn-primary capitalize">About us</button>
-              <button class="btn btn-md lg:btn-lg  capitalize shadow-xl">Call us</button>
+      <!--   Sub-Service List -->
+
+        <div class="col-span-3 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+          <div class="card w-full bg-base-100 shadow-xl">
+            <figure class="h-72">
+              <img src="assets/images/medical_care.jpg" alt="Shoes" class="rounded-t-xl" />
+            </figure>
+            <div class="card-body m-0">
+              <h2 class="card-title text-xl font-bold">Medical Center</h2>
+              <div class="text-lg">Responsible and diligent approach to each patient. The optimum ratio of price and quality. High quality health care and service....</div>
+              <div class="card-actions">
+                <div class="card-actions justify-start pt-8 items-center">
+                  <button class="btn btn-primary btn-outline">Read more <span class="fe fe-chevron-right"></span></button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-span-3  hidden lg:block" ></div>
-        </div>
-      </div>
-    </div>
 
-    <div nz-carousel-content  class="">
-      <div [ngStyle]="{backgroundImage: 'url(/assets/images/slide'+3+'.jpg)'}" [ngClass]="'h-96 lg:h-screen bg-cover bg-right bg-gray-100'">
-        <div class="w-full h-full container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 pb-10 lg:pb-60">
-          <div class="flex flex-col justify-end space-y-10 h-full">
-            <div class="hidden lg:block border-l-8 border-primary font-bold text-xl pl-4">Living Care Family Service</div>
-            <div class="hidden lg:block  text-5xl font-bold animate__animated  animate__fadeInDown">Correct diagnosis is half the success</div>
-            <div class="space-x-2 lg:space-x-8 flex justify-center mt-56 animate__animated  animate__fadeInDown lg:justify-start">
-              <button class="btn btn-md lg:btn-lg btn-primary capitalize">About us</button>
-              <button class="btn btn-md lg:btn-lg  capitalize shadow-xl">Call us</button>
+          <div class="card w-full p-0 bg-base-100 shadow-xl">
+            <figure class="h-72">
+              <img src="assets/images/care_and_help.jpg" alt="Shoes" class="rounded-t-xl" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-xl font-bold">Care and help at home</h2>
+              <div class="text-lg">Responsible and diligent approach to each patient. The optimum ratio of price and quality. High quality health care and service....</div>
+              <div class="card-actions justify-start pt-8 items-center">
+                <button class="btn btn-primary btn-outline">Read more <span class="fe fe-chevron-right"></span></button>
+              </div>
             </div>
           </div>
-          <div class="col-span-3  hidden lg:block"></div>
-        </div>
-      </div>
-    </div>
 
-  </nz-carousel>
-  <div class="bg-gray-800 h-56">
-    <div class="container mx-auto">
-      <div class="text-white py-20 text-2xl">Why Choose Us?</div>
+          <div class="card w-full p-0 bg-base-100 shadow-xl">
+            <figure class="h-72">
+              <img src="assets/images/care_and_help.jpg" alt="Shoes" class="rounded-t-xl" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-xl font-bold">Care and help at home</h2>
+              <div class="text-lg">Responsible and diligent approach to each patient. The optimum ratio of price and quality. High quality health care and service....</div>
+              <div class="card-actions justify-start pt-8 items-center">
+                <button class="btn btn-primary btn-outline">Read more <span class="fe fe-chevron-right"></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
     </div>
-  </div>
+    <br><br>
+  </section>
 </div>
 
