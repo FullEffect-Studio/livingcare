@@ -21,7 +21,9 @@ export class HomeComponent implements OnInit {
     })
   )
 
-  constructor() {}
+  lat = 51.370656;
+  lng = -0.1093368;
+
 
 
 
@@ -57,22 +59,22 @@ export enum ServiceID{
 const servicesListData:Service[] = [
   {
     id: ServiceID.ElderPeople,
-    label: 'For the elderly people',
+    label: 'Autism',
     url: ''
   },
   {
     id: ServiceID.MonitoringAndDiagnostics,
-    label: 'Monitoring & Diagnostics',
+    label: 'Learning disability',
     url: ''
   },
   {
     id: ServiceID.PeopleWithDisabilties,
-    label: 'People with disabilities',
+    label: 'Positive behavioural',
     url: ''
   },
   {
     id: ServiceID.RehabilitationAndRecovery,
-    label: 'Rehabilitation and recovery',
+    label: 'Mental Health',
     url: ''
   }
 ]
@@ -80,61 +82,61 @@ const servicesListData:Service[] = [
 const subServicesListData: SubService[] = [
   {
     serviceId: ServiceID.ElderPeople,
-    imageUrl: 'assets/images/medical_care.jpg',
-    label: 'Medical care and care',
-    summary: 'Responsible and diligent approach to each patient. The optimum ratio of price and quality. High quality health care and service....',
+    imageUrl: 'assets/images/autism_service1.jpg',
+    label: 'Our Aim',
+    summary: 'Our aim is to develop the skills of the people we support to help them....',
     link: ''
   },
   {
     serviceId: ServiceID.ElderPeople,
-    imageUrl: 'assets/images/care_and_help.jpg',
-    label: 'Care and help at home',
-    summary: 'Responsible and diligent approach to each patient. The optimum ratio of price and quality. High quality health care and service....',
+    imageUrl: 'assets/images/autism_service2.jpg',
+    label: 'Our Autism services',
+    summary: 'From the safe, structured and homely environments to a staff team with ....',
     link: ''
   },
   {
     serviceId: ServiceID.ElderPeople,
     imageUrl: 'assets/images/specialized_care.jpg',
-    label: 'Specialized Care',
-    summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
+    label: 'Our Unique Approach',
+    summary: 'We always involve people in deciding how they are supported, as we know that everyone....',
     link: ''
   },
 
   {
     serviceId: ServiceID.MonitoringAndDiagnostics,
-    imageUrl: 'assets/images/specialized_care.jpg',
-    label: 'Specialized Care',
-    summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
+    imageUrl: 'assets/images/learningdisability1.jpg',
+    label: 'learning disability services',
+    summary: 'We are committed to delivering genuinely person-centred services.....',
     link: ''
   },
   {
     serviceId: ServiceID.MonitoringAndDiagnostics,
-    imageUrl: 'assets/images/doctors_visit.jpg',
-    label: "Doctor's visit to the house",
-    summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
+    imageUrl: 'assets/images/learningdisability2.jpg',
+    label: "Our Unique Approach",
+    summary: 'We understand that living with a learning disability can make a number of daily tasks....',
     link: ''
   },
 
   {
     serviceId: ServiceID.PeopleWithDisabilties,
-    imageUrl: 'assets/images/specialized_care.jpg',
-    label: 'Specialized Care',
-    summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
+    imageUrl: 'assets/images/specialized_care2.jpg',
+    label: 'positive behavioural services',
+    summary: 'Our specialists will assess the relationship between the behaviours that challenge....',
     link: ''
   },
 
   {
     serviceId: ServiceID.RehabilitationAndRecovery,
-    imageUrl: 'assets/images/specialized_care.jpg',
-    label: 'Specialized Care',
-    summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
+    imageUrl: 'assets/images/mentalhealth1.jpg',
+    label: 'Mental health services',
+    summary: 'Mental health is something that we can all relate to and something we provide support for.....',
     link: ''
   },
   {
     serviceId: ServiceID.RehabilitationAndRecovery,
-    imageUrl: 'assets/images/doctors_visit.jpg',
-    label: "Doctor's visit to the house",
-    summary: 'High quality health care and service. Advanced medical technologies and innovative diagnosis and treatment methods....',
+    imageUrl: 'assets/images/mentalhealth2.jpg',
+    label: "Our Unique Approach",
+    summary: 'We understand that suitable housing with the right support is an essential part of overcoming mental health....',
     link: ''
   },
 

@@ -2,11 +2,21 @@
 module.exports = {
   content: ['./apps/**/*.{html,ts}'],
   theme: {
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
     extend: {
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',
         'display': 'block, hidden'
+      },
+      spacing: {
+        '100': '28rem',
+        '120': '30rem',
+        '128': '32rem',
+        '144': '36rem',
       }
     },
   },
@@ -48,5 +58,6 @@ module.exports = {
       },
     ],
   },
-  plugins: [require('daisyui')],
+  plugins: [
+    require('daisyui')],
 };

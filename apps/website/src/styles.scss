@@ -27,7 +27,7 @@
 
 :root {
   --animate-duration: 300ms;
-  --animate-delay: 0.9s;
+  --animate-delay: 2s;
 }
 
 @layer base {
@@ -74,6 +74,10 @@
   .team-member:hover  img{
     @apply transition-all ease-in;
   }
+
+  //.cta:hover {
+  //  @apply bg-primary animate__animated  animate__flipOutY animate__slower ;
+  //}
 
 
 }

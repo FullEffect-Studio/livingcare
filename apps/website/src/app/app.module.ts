@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import {AgmCoreModule} from "@agm/core";
 
 registerLocaleData(en);
 
@@ -44,6 +45,10 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzCarouselModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA20sB8VemHJcRLFDDKaLCK2lkfazkUCV0',
+      libraries: ['places']
+    })
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
