@@ -53,11 +53,11 @@
   </section>
 
   <!--  Mission & Values -->
-  <section class="my-8 lg:my-16">
+  <section class="my-8 lg:my-16 bg-primary/10">
     <div
-      class="container md:mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      class="container md:mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center divide-dashed divide-y divide-x-0 lg:divide-x lg:divide-y-0 divide-primary">
       <div
-        class="bg-base-200x h-128 px-16 rounded-2xl pt-8 lg:pt-8 pb-24 flex flex-col items-center justify-center space-y-10"
+        class="lg:h-128 px-8 lg:px-16 rounded-2xl pt-8 lg:pt-8 pb-20 flex flex-col items-center justify-center space-y-10"
       >
         <div class="flex flex-col items-center justify-center">
           <div class="font-black text-3xl">Mission</div>
@@ -71,58 +71,17 @@
           >
         </div>
       </div>
-      <div class="border-primary borderx border-4x h-128 rounded-2xl px-8 lg:px-16 pt-8 lg:pt-10 pb-28 space-y-10 flex flex-col items-center ">
+      <div class="h-128 px-8 lg:px-16 pt-8 lg:pt-10 pb-28 lg:space-y-10 flex flex-col items-center ">
         <div class="flex flex-col justify-center">
           <div class="font-black text-3xl">Values</div>
         </div>
 
         <div class="w-full">
-          <nz-carousel [nzAutoPlay]="true" [nzDots]="true"  [nzEnableSwipe]="true" nzDotPosition="top"  >
-            <div nz-carousel-content >
-              <div class="card bg-primary p-8">
-                <div class="font-bold text-white text-2xl text-center">
-                  Excellence
-                </div>
-                <div class="card-body text-lg h-48 text-white text-center">
-                  We are committed to excellence in everything we do. The
-                  success of our organisation and, crucially, the successes and
-                  outcomes of the people who use our services, depends on our
-                  ability to deliver consistently excellent services that exceed
-                  expectations.
-                </div>
-              </div>
-            </div>
-
-              <div nz-carousel-content   >
-                <div class="card bg-primary p-8">
-                  <div class="font-bold text-white text-2xl text-center">
-                    Partnership
-                  </div>
-                  <div class="card-body text-lg text-white h-48 text-center">
-                    Partnership informs and influences everything we do. Through working together at every level, service users and staff will together design and deliver flexible, personalised and better services.
-                  </div>
-                </div>
-              </div>
-              <div nz-carousel-content  >
-                <div class="card bg-primary p-8">
-                  <div class="font-bold text-white text-2xl text-center">
-                    Trust
-                  </div>
-                  <div class="card-body text-lg text-white h-48 text-center">
-                    We are an organisation with a strong social purpose. We will be trusted by our commissioners and funders to deliver the services we say we will. We will behave with integrity and transparency. We will be trusted by our service users to deliver on our promises and by their loved ones to deliver safe and consistently high quality services.
-                  </div>
-                </div>
-              </div>
-              <div  nz-carousel-content  >
-                <div class="card bg-primary p-8">
-                  <div class="font-bold text-white text-2xl text-center">
-                    Aspiration
-                  </div>
-                  <div class="card-body text-lg text-white h-48 text-center">
-                    We are an organisation with a strong social purpose. We will be trusted by our commissioners and funders to deliver the services we say we will. We will behave with integrity and transparency. We will be trusted by our service users to deliver on our promises and by their loved ones to deliver safe and consistently high quality services.
-                  </div>
-                </div>
-              </div>
+          <nz-carousel [nzAutoPlay]="true" [nzDots]="true"  [nzEnableSwipe]="true" nzDotPosition="bottom"  >
+            <livingcare-values-slider-view nz-carousel-content title="Excellence" description="We are committed to excellence in everything we do. The success of our organisation and, crucially, the successes and outcomes of the people who use our services, depends on our ability to deliver consistently excellent services that exceed expectations."></livingcare-values-slider-view>
+            <livingcare-values-slider-view nz-carousel-content  title="Partnership" description="Partnership informs and influences everything we do. Through working together at every level, service users and staff will together design and deliver flexible, personalised and better services." ></livingcare-values-slider-view>
+            <livingcare-values-slider-view nz-carousel-content title="Trust" description="We are an organisation with a strong social purpose. We will be trusted by our commissioners and funders to deliver the services we say we will. We will behave with integrity and transparency. We will be trusted by our service users to deliver on our promises and by their loved ones to deliver safe and consistently high quality services." ></livingcare-values-slider-view>
+            <livingcare-values-slider-view  nz-carousel-content  title="Aspiration" description="We are aspirational – for our customers, staff, and organisation. We aim high, seek out opportunities, and do not shy away from the challenges we face. We believe in identifying, nurturing, and developing potential and creating a culture of recognition and celebration across the organisation."></livingcare-values-slider-view>
           </nz-carousel>
         </div>
       </div>
@@ -133,7 +92,7 @@
   <section class="my-8 lg:my-16">
     <div
       class="container md:mx-auto grid grid-cols-1 lg:grid-cols-2 bg-base-200 items-stretch">
-      <div class="container mx-auto px-32 py-16 space-y-6">
+      <div class="container mx-auto px-8 lg:px-32 py-16 space-y-6">
         <div class="font-black text-3xl">Our Support Model</div>
         <div class="w-10 border-t-4 mt-2 lg:mt-8 border-primary"></div>
 <!--        <div class="font-serifx text-2xl text-primary-focus text-center mt-4 mb-8 font-semibold"></div>-->
@@ -161,6 +120,65 @@
 
       </div>
 
+    </div>
+  </section>
+
+  <!--  Big Difference -->
+  <section class="bg-base-200x my-8">
+    <div
+      class="container md:mx-auto grid grid-cols-1 lg:grid-cols-2 items-stretch"
+    >
+      <div
+        class="h-96 p-16 lg:h-auto"
+      >
+        <img src="/assets/images/about1.jpg" alt="">
+      </div>
+      <div class="bg-base-100 px-8 lg:px-16 pt-8 lg:pt-16 pb-28 space-y-10">
+        <div>
+          <div class="font-black text-3xl">The Big Difference</div>
+          <div class="text-primary text-xl mt-2 lg:mt-4">Why Choose us</div>
+        </div>
+       <div class="space-y-8">
+
+
+         <div class="grid grid-cols-12 gap-4 items-center">
+           <div class="col-span-2 flex justify-center items-center bg-primary-focus w-full h-16 text-4xl font-bold text-white">
+             1
+           </div>
+           <div class="col-span-10">
+             <div class="font-bold  text-lg">Respect</div>
+             <div>We respect the dignity of each person, to choose how they live and our support and care do not degrade a person’s inherent dignity.</div>
+           </div>
+         </div>
+
+         <div class="grid grid-cols-12 gap-4 items-center">
+           <div class="col-span-2 flex justify-center items-center bg-primary-focus w-full h-16 text-4xl font-bold text-white">
+             2
+           </div>
+           <div class="col-span-10">
+             <div class="font-bold  text-lg">Training</div>
+             <div>Our staff training helps colleagues to understand what they need to do in order to make a reality of our shared philosophy of supporting our people.</div>
+           </div>
+         </div>
+
+         <div class="grid grid-cols-12 gap-4 items-center">
+           <div class="col-span-2 flex justify-center items-center bg-primary-focus w-full h-16 text-4xl font-bold text-white">
+             3
+           </div>
+           <div class="col-span-10">
+             <div class="font-bold  text-lg">Compassion</div>
+             <div>The support we offer is underpinned by the active gift of kindness, love, caring, and a demonstration of being willing to help.</div>
+           </div>
+         </div>
+
+
+
+
+
+       </div>
+
+
+      </div>
     </div>
   </section>
 

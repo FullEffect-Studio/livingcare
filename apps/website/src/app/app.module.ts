@@ -27,6 +27,8 @@ import { LearningDisabilityComponent } from './pages/services/learning-disabilit
 import { PositiveBehaviourComponent } from './pages/services/positive-behaviour/positive-behaviour.component';
 import { MentalHealthComponent } from './pages/services/mental-health/mental-health.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { HomeSliderViewComponent } from './components/home-slider-view/home-slider-view.component';
+import { ValuesSliderViewComponent } from './components/values-slider-view/values-slider-view.component';
 
 registerLocaleData(en);
 
@@ -46,6 +48,8 @@ registerLocaleData(en);
     PositiveBehaviourComponent,
     MentalHealthComponent,
     PageNotFoundComponent,
+    HomeSliderViewComponent,
+    ValuesSliderViewComponent,
   ],
   imports: [
     BrowserModule,
