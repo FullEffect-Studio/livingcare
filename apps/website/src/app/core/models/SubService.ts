@@ -6,4 +6,5 @@ export interface  SubService{
   label: string
   summary: string
   link: string
+  styleClasses: string
 }

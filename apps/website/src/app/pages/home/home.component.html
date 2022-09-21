@@ -58,30 +58,8 @@
           <div class="w-10 border-t-4 mt-2 lg:mt-8 border-primary"></div>
         </div>
       </div>
-      <div
-        *ngFor="let sub of services$$ | async"
-        class="card animate__animated animate__slideInUp animate__faster w-full bg-base-100 shadow-xl"
-      >
-        <figure class="h-44">
-          <img [src]="sub.imageUrl" alt="Shoes" class="rounded-t-xl" />
-        </figure>
-        <div class="card-body m-0">
-          <h2 class="card-title text-xl font-bold">{{ sub.label }}</h2>
-          <div class="text-base max-h-24">{{ sub.summary }}</div>
-          <div class="card-actions">
-            <div class="card-actions justify-start pt-8 items-center">
-              <button
-                routerLink="/services/autism"
-                routerLinkActive="a"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="btn btn-sm btn-primary btn-outline"
-              >
-                Read more <span class="fe fe-chevron-right"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <livingcare-service-vert-card-view *ngFor="let sub of services$$ | async" [service]="sub">
+      </livingcare-service-vert-card-view>
     </div>
   </section>
 
@@ -498,6 +476,9 @@
       <div class="containerx md:mx-autox min-h-96">
         <agm-map
           [latitude]="lat"
+          [scrollwheel]="false"
+          [disableDoubleClickZoom]="true"
+          [mapDraggable]="false"
           [zoom]="18"
           [showDefaultInfoWindow]="true"
           [controlSize]="10"

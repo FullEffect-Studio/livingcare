@@ -13,21 +13,9 @@
 
 
   <section class="">
-    <div class="container mx-auto px-8 lg:px-16 py-16 lg:py-32 grid grid-cols-1 lg:grid-cols-2 items-start items-stretch gap-8 lg:gap-16x space-y-0">
-        <div *ngFor="let s of services$$|async" class="animate__animated animate__slideInUp animate__faster w-full bg-base-100 shadow-xl flex flex-row items-stretch">
-          <div class="w-2/5 bg-cover bg-center" [style.background-image]="'url(' + s.imageUrl + ')'"  >
-<!--            <img [src]="s.imageUrl" alt="Shoes" class="rounded-bl-2xl"/>-->
-          </div>
-          <div class="w-3/5 px-8 py-8">
-            <h2 class="text-xl font-bold">{{s.label}}</h2>
-            <div class="text-lg">{{s.summary}}</div>
-            <div class="">
-              <div class=" justify-start pt-8 items-center">
-                <button [routerLink]="s.link" class="btn btn-primary btn-outline">Read more <span class="fe fe-chevron-right"></span></button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="container mx-auto px-8 lg:px-16 py-16 lg:py-32 grid grid-cols-1 lg:grid-cols-2 items-start items-stretch gap-8 lg:gap-16 space-y-0">
+        <livingcare-service-hori-card-view class="hidden lg:block" *ngFor="let s of services$$|async"  [service]="s"></livingcare-service-hori-card-view>
+        <livingcare-service-vert-card-view class="lg:hidden" *ngFor="let s of services$$|async"  [service]="s"></livingcare-service-vert-card-view>
     </div>
   </section>
 </div>

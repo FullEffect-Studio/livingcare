@@ -1,0 +1,14 @@
+<div *ngIf="service" class="card animate__animated animate__slideInUp animate__faster w-full bg-base-100 shadow-xl flex flex-row items-stretch">
+  <div class="w-2/5 bg-cover " [ngClass]="service.styleClasses" [style.background-image]="'url(' + service.imageUrl + ')'"  >
+    <!--            <img [src]="s.imageUrl" alt="Shoes" class="rounded-bl-2xl"/>-->
+  </div>
+  <div class="w-3/5 px-8 py-8">
+    <h2 class="text-xl font-bold">{{service.label}}</h2>
+    <div class="text-lg h-28">{{service.summary}}</div>
+    <div class="">
+      <div class=" justify-start pt-8 items-center">
+        <button [routerLink]="service.link" class="btn btn-primary btn-outline">Read more <span class="fe fe-chevron-right"></span></button>
+      </div>
+    </div>
+  </div>
+</div>

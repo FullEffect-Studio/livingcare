@@ -29,6 +29,8 @@ import { MentalHealthComponent } from './pages/services/mental-health/mental-hea
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HomeSliderViewComponent } from './components/home-slider-view/home-slider-view.component';
 import { ValuesSliderViewComponent } from './components/values-slider-view/values-slider-view.component';
+import { ServiceVertCardViewComponent } from './components/service-vert-card-view/service-vert-card-view.component';
+import { ServiceHoriCardViewComponent } from './components/service-hori-card-view/service-hori-card-view.component';
 
 registerLocaleData(en);
 
@@ -50,6 +52,8 @@ registerLocaleData(en);
     PageNotFoundComponent,
     HomeSliderViewComponent,
     ValuesSliderViewComponent,
+    ServiceVertCardViewComponent,
+    ServiceHoriCardViewComponent,
   ],
   imports: [
     BrowserModule,
