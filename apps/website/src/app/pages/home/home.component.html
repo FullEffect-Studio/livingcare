@@ -77,42 +77,35 @@
   </section>
 
   <!--  Services  -->
-  <section class="">
-    <div class="container mx-auto px-8 lg:px-16 py-16 lg:py-32 grid grid-cols-1 lg:grid-cols-3 items-start  gap-8 lg:gap-16 space-y-0">
-      <!-- Service Categories      -->
-        <div class="p-8 space-y-8 card w-full bg-base-100 col-span-3 lg:col-span-1  shadow-xl" >
-          <div class="pl-4">
-            <div class="font-black text-3xl">Services</div>
-            <div class="w-10 border-t-4 mt-2 lg:mt-8  border-primary"></div>
-          </div>
-          <ul class="space-y-4 list-outside">
-            <li *ngFor="let service of services|async" (click)="onSelectedServiceChanged(service.id)" [ngClass]="{'text-primary': service.id === selectedService.value}" class="flex items-center transition-all ease-in hover:text-primary cursor-pointer"><span class="fe fe-chevron-right font-bold text-lg text-primary"></span> <span class="font-semibold text-lg">{{service.label}}</span></li>
-          </ul>
+  <section class="bg-base-200">
+    <div class="container mx-auto px-8 lg:px-16 py-16 lg:py-32 grid grid-cols-1 lg:grid-cols-4 items-stretch gap-8 space-y-0">
+
+      <div class="col-span-4 w-full flex flex-col items-center justify-center space-y-8">
+        <div class="flex flex-col items-center">
+          <div class="font-black text-3xl">Assisted Living Services</div>
+          <div class="w-10 border-t-4 mt-2 lg:mt-8 border-primary"></div>
         </div>
-
-      <!--   Sub-Service List -->
-
-        <div class="col-span-3 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div *ngFor="let sub of viewModel$|async" class="card animate__animated animate__slideInUp animate__faster w-full bg-base-100 shadow-xl">
-            <figure class="h-72">
+      </div>
+          <div *ngFor="let sub of services$$|async" class="card animate__animated animate__slideInUp animate__faster w-full bg-base-100 shadow-xl">
+            <figure class="h-56">
               <img [src]="sub.imageUrl" alt="Shoes" class="rounded-t-xl"/>
             </figure>
             <div class="card-body m-0">
               <h2 class="card-title text-xl font-bold">{{sub.label}}</h2>
-              <div class="text-lg">{{sub.summary}}</div>
+              <div class="text-lg max-h-24">{{sub.summary}}</div>
               <div class="card-actions">
                 <div class="card-actions justify-start pt-8 items-center">
-                  <button class="btn btn-primary btn-outline">Read more <span class="fe fe-chevron-right"></span></button>
+
+                  <button  routerLink="/services/autism" routerLinkActive="a"  [routerLinkActiveOptions]="{exact: true}" class="btn btn-primary btn-outline">Read more <span class="fe fe-chevron-right"></span></button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
     </div>
   </section>
 
   <!--  About Us -->
-  <section class="bg-base-200">
+  <section class="bg-base-200x">
     <div class="container grid grid-cols-1 lg:grid-cols-2 items-stretch">
       <div class="bg-[url('/assets/images/about1.jpg')] bg-cover bg-center h-96 lg:h-auto"></div>
       <div class="container bg-base-100 px-8 lg:px-16 pt-8 lg:pt-16 pb-28 space-y-10 md:mx-auto">
@@ -175,7 +168,7 @@
   </section>
 
   <!--  CTAs  -->
-  <section class="">
+  <section class="bg-base-200">
     <div class="container  mx-auto px-8 lg:px-16 py-0 lg:py-32 grid grid-cols-1 lg:grid-cols-4 items-startx items-stretch gap-8 lg:gap-16x space-y-0">
       <div class="p-8 space-y-4 cta card flex flex-col cursor-pointer items-center justify-center w-full col-span-3 lg:col-span-1 hover:bg-accent" >
         <figure class="w-16 ">
@@ -264,7 +257,6 @@
 
     </div>
   </section>
-
 
   <!--  Features  -->
   <section class="">
@@ -396,7 +388,7 @@
   <section class="bg-base-200">
     <div class="container grid grid-cols-1 lg:grid-cols-2 ">
 
-      <div class="container bg-base-100 px-8 lg:px-16 pt-8 lg:pt-16 pb-28 space-y-4 md:mx-auto">
+      <div class="containerx bg-base-100 px-8 lg:px-16 pt-8 lg:pt-16 pb-28 space-y-4 md:mx-autox">
         <div>
           <div class="font-black text-3xl">Contact Us</div>
           <div class="w-10 border-t-4 mt-2 lg:mt-8  border-primary"></div>
@@ -430,7 +422,7 @@
 
         </div>
       </div>
-      <div class="container md:mx-auto min-h-96">
+      <div class="containerx md:mx-autox min-h-96">
         <agm-map [latitude]="lat" [zoom]="18" [showDefaultInfoWindow]="true" [controlSize]="10"  [longitude]="lng">
           <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
         </agm-map>

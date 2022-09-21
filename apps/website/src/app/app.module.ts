@@ -21,7 +21,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
-import {AgmCoreModule} from "@agm/core";
+import { AgmCoreModule } from '@agm/core';
+import { AutismComponent } from './pages/services/autism/autism.component';
+import { LearningDisabilityComponent } from './pages/services/learning-disability/learning-disability.component';
+import { PositiveBehaviourComponent } from './pages/services/positive-behaviour/positive-behaviour.component';
+import { MentalHealthComponent } from './pages/services/mental-health/mental-health.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 registerLocaleData(en);
 
@@ -36,6 +41,11 @@ registerLocaleData(en);
     ServicesComponent,
     ContactComponent,
     MobileMenuComponent,
+    AutismComponent,
+    LearningDisabilityComponent,
+    PositiveBehaviourComponent,
+    MentalHealthComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,8 +57,8 @@ registerLocaleData(en);
     NzCarouselModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA20sB8VemHJcRLFDDKaLCK2lkfazkUCV0',
-      libraries: ['places']
-    })
+      libraries: ['places'],
+    }),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],

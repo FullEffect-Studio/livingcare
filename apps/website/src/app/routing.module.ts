@@ -10,6 +10,11 @@ import {HomeComponent} from "./pages/home/home.component";
 import {AboutComponent} from "./pages/about/about.component";
 import {ServicesComponent} from "./pages/services/services.component";
 import {ContactComponent} from "./pages/contact/contact.component";
+import {AutismComponent} from "./pages/services/autism/autism.component";
+import {LearningDisabilityComponent} from "./pages/services/learning-disability/learning-disability.component";
+import {MentalHealthComponent} from "./pages/services/mental-health/mental-health.component";
+import {PositiveBehaviourComponent} from "./pages/services/positive-behaviour/positive-behaviour.component";
+import {PageNotFoundComponent} from "./pages/page-not-found/page-not-found.component";
 
 const routes: Routes = [
 
@@ -22,13 +27,31 @@ const routes: Routes = [
     component: AboutComponent,
   },
   {
+    path: 'services/autism',
+    component: AutismComponent,
+  },
+  {
+    path: 'services/learning-disability',
+    component: LearningDisabilityComponent
+  },
+  {
+    path: 'services/mental-health',
+    component: MentalHealthComponent
+  },
+  {
+    path: 'services/positive-behaviour',
+    component: PositiveBehaviourComponent
+  },
+
+  {
     path: 'services',
     component: ServicesComponent,
   },
   {
     path: 'contact',
     component: ContactComponent,
-  }
+  },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
