@@ -3,8 +3,8 @@ module.exports = {
   content: ['./apps/**/*.{html,ts}'],
   theme: {
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      sans: ['Montserrat', 'sans-serif'],
+      // serif: ['Merriweather', 'serif'],
     },
     extend: {
       transitionProperty: {

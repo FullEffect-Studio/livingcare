@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {servicesData} from "../../../core/data";
 
 @Component({
   selector: 'livingcare-positive-behaviour',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./positive-behaviour.component.scss'],
 })
 export class PositiveBehaviourComponent implements OnInit {
+  services=servicesData
   constructor() {}
 
   ngOnInit(): void {}

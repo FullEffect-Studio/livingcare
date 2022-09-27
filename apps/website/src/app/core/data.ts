@@ -5,20 +5,20 @@ import {SubService} from "./models/SubService";
 export const servicesData: SubService[] = [
   {
     serviceId: ServiceID.Autism,
-    imageUrl: 'assets/images/autism_service1.jpg',
+    imageUrl: 'assets/images/autism_edit.jpg',
     label: 'Autism',
-    summary: 'We understand that living with an autistic spectrum disorder (ASD) including Asperger Syndrome can make...',
+    summary: 'Living with Autism can make daily life difficult. The level of difficulty will be different from one person to the other....',
     link: '/services/autism',
-    styleClasses: ''
+    styleClasses: 'bg-right-top'
   },
 
   {
     serviceId: ServiceID.LearningDisability,
-    imageUrl: 'assets/images/learningdisability1.jpg',
+    imageUrl: 'assets/images/learningdisability_edit.jpg',
     label: 'Learning Disability',
-    summary: 'We understand that living with a learning disability can make a number of daily tasks and situations...',
+    summary: 'Regardless of age or presumptive ability, we think that everyone can live a good life with favorable outcomes....',
     link: '/services/learning-disability',
-    styleClasses: 'bg-right-top'
+    styleClasses: 'bg-center'
   },
 
 
@@ -26,14 +26,14 @@ export const servicesData: SubService[] = [
     serviceId: ServiceID.MentalHealth,
     imageUrl: 'assets/images/mentalhealth1.jpg',
     label: 'Mental Health',
-    summary: 'We understand that suitable housing with the right support is an essential part of overcoming mental...',
+    summary: 'We work collaboratively with Health and Specialist mental health services to provide assistance...',
     link: '/services/mental-health',
-    styleClasses: ''
+    styleClasses: 'bg-left'
   },
 
   {
     serviceId: ServiceID.PositiveBehaviour,
-    imageUrl: 'assets/images/specialized_care2.jpg',
+    imageUrl: 'assets/images/about_edit.jpg',
     label: 'Positive Behaviour',
     summary: 'Through our Positive Behaviour Support services, we specialise in supporting adults with autism,...',
     link: '/services/positive-behaviour',

@@ -1,0 +1,67 @@
+<div class="lg:pt-20 bg-base-200 ">
+  <section
+    class="bg-[url('/assets/images/about_header_bg1.jpg')] col-span-4 bg-cover bg-center relative">
+    <div class="px-8 lg:px-16 bg-black/50">
+      <div
+        class="text-4xl font-black font-sans text-white drop-shadow py-8 lg:py-32 text-center"
+      >
+        Autism
+      </div>
+    </div>
+  </section>
+
+
+ <div class="container px-8 mt-8 lg:mt-16 lg:px-16 md:mx-auto grid grid-cols-4 gap-16 pb-16">
+
+   <section class="col-span-4 lg:col-span-3 space-y-8">
+     <div class="bg-cover  bg-[url('/assets/images/autism_edit.jpg')] h-120"></div>
+
+
+     <div class="space-y-4">
+       <p>Living with Autism can make daily life difficult. The level of difficulty will be different from one person to the other. Our goal is to help those we support to gain the skills
+         they need and be encouraged to pursue their goals and aspirations through person-centered care plans.
+       </p>
+     </div>
+
+     <div class="space-y-4 grid grid-cols-3 gap-8">
+        <div class="col-span-3 font-black font-sans font-bold text-2xl">Our Specialist Autism Services</div>
+        <div class="col-span-3 lg:col-span-2 space-y-4">
+          <div>We offer environments that are secure, orderly, and comfortable as well as a professional team that has substantial experience and competence.
+            <br><br>Since we are aware that every person with an autism spectrum disorder has unique skills and preferences, we always involve the person in selecting how they are supported. For instance, some people could struggle with social contact, whilst others might struggle with language and communication.
+            <br><br>We will always work with the individual to determine how to best to serve them in order to help us better understand their interests, talents, abilities, and needs. This makes it simpler for professionals to comprehend the person's situation and to spot cognitive skills that might need concentration.
+          </div>
+        </div>
+        <div class="col-span-3 lg:col-span-1">
+          <img class="hidden md:block" src="/assets/images/autism_service3.jpg" alt="Autism">
+        </div>
+     </div>
+
+<!--     <div class="space-y-4">-->
+<!--       <div class="col-span-3 font-black font-sans font-bold text-2xl">Our Unique Approach to Autism</div>-->
+<!--     </div>-->
+
+     <div class="bg-primary-focus flex justify-center items-center p-16 lg:px-32 lg:py-16">
+       <div>
+         <div class="text-2xl">Autism is like a rainbow. It has a bright side and a darker side. But every shade is important and beautiful.</div>
+         <div class="text-white font-semibold uppercase mt-4">ROSIE TENNAT DORAN: Fellow Autist</div>
+       </div>
+     </div>
+
+   </section>
+
+   <section class="col-span-4 lg:col-span-1">
+     <div class="p-8 space-y-8 card w-full col-span-3 lg:col-span-1 shadow-xl" >
+       <div class="pl-4">
+         <div class="font-black text-3xl">Services</div>
+         <div class="w-10 border-t-4 mt-2 lg:mt-8  border-primary"></div>
+       </div>
+       <ul class="space-y-4 list-outside">
+         <li *ngFor="let service of services"  [routerLink]="service.link" class="flex items-center transition-all ease-in hover:text-primary cursor-pointer"><span class="fe fe-chevron-right font-bold text-lg text-primary"></span> <span class="font-semibold text-lg">{{service.label}}</span></li>
+       </ul>
+     </div>
+
+   </section>
+
+ </div>
+
+</div>

@@ -1,12 +1,110 @@
-<section
-  class="bg-[url('/assets/images/about_header_bg1.jpg')] bg-cover bg-center relative"
->
-  <div class="px-8 lg:px-16 bg-black/50">
-    <div
-      class="text-4xl font-black text-white drop-shadow py-8 lg:py-32 text-center"
-    >
-      About Us
+<div class="lg:pt-20">
+  <section class="bg-[url('/assets/images/about_header_bg1.jpg')] bg-cover bg-center relative">
+    <div class="px-8 lg:px-16 bg-black/50">
+      <div
+        class="text-4xl font-black font-sans text-white drop-shadow py-8 lg:py-32 text-center"
+      >
+        Contact Us
+      </div>
     </div>
+  </section>
+
+  <div class=" min-h-96">
+    <agm-map
+      [latitude]="lat"
+      [scrollwheel]="false"
+      [disableDoubleClickZoom]="true"
+      [mapDraggable]="false"
+      [zoom]="17"
+      [showDefaultInfoWindow]="true"
+      [controlSize]="10"
+      [longitude]="lng"
+    >
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
   </div>
 
-</section>
+  <div>
+    <div class="container md:mx-auto px-6 lg:px-16 grid grid-cols-2  divide-solid divide-y divide-x-0 lg:divide-x lg:divide-y-0 divide-primary ">
+      <div class="col-span-2 lg:col-span-1 py-16 lg:pr-16">
+        <div>
+          <div class="font-black font-sans text-3xl">Get in touch</div>
+          <div class="w-10 border-t-4 mt-2 lg:mt-8 border-primary"></div>
+        </div>
+        <div class="divide-y space-y-8">
+          <div class="flex items-center space-x-4 pt-8">
+            <div
+              class="flex justify-center items-center rounded-full w-14 h-14 bg-base-300 text-primary justify-center"
+            >
+              <span class="fe fe-map-pin fa-2x"></span>
+            </div>
+            <div class="w-20 text-lg font-bold hidden lg:block">Address:</div>
+            <div class="text-lg w-64">49 Harrisons Rise, Croydon, CR0 4LL</div>
+          </div>
+
+          <div class="flex items-center space-x-4 pt-8">
+            <div
+              class="flex justify-center items-center rounded-full w-14 h-14 bg-base-300 text-primary justify-center"
+            >
+              <span class="fe fe-mail fa-2x"></span>
+            </div>
+            <div class="w-20 text-lg font-bold hidden lg:block">Email:</div>
+            <div class="text-lg w-64">info@living-care.org</div>
+          </div>
+
+          <div class="flex items-center space-x-4 pt-8">
+            <div
+              class="flex justify-center items-center rounded-full w-14 h-14 bg-base-300 text-primary justify-center"
+            >
+              <span class="fe fe-phone-call fa-2x"></span>
+            </div>
+            <div class="w-20 text-lg font-bold hidden lg:block">Phone:</div>
+            <div class="text-lg w-64">079 4624 0001</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-2 lg:col-span-1">
+        <form class="grid grid-cols-2 gap-8 justify-center lg:pl-16 py-16">
+          <div class="col-span-2">
+            <div class="font-black font-sans text-3xl">Send Message</div>
+            <div class="w-10 border-t-4 mt-2 lg:mt-8 border-primary"></div>
+          </div>
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text font-semibold">Your Name</span>
+            </label>
+            <input type="text" placeholder="" class="input bg-base-200  w-full max-w-xs" />
+          </div>
+
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text font-semibold">Your Email</span>
+            </label>
+            <input type="email" placeholder="" class="input bg-base-200  w-full max-w-xs" />
+          </div>
+
+
+          <div class="form-control col-span-2 w-full">
+            <label class="label">
+              <span class="label-text font-semibold">Subject</span>
+            </label>
+            <input type="text" placeholder="" class="input bg-base-200 w-full" />
+          </div>
+
+
+          <div class="form-control w-full col-span-2">
+            <label class="label">
+              <span class="label-text font-semibold">Your Message</span>
+            </label>
+            <textarea  class=" input bg-base-200  w-full "></textarea>
+          </div>
+
+          <div class="form-control w-full col-span-2">
+           <button class="btn btn-primary btn-lg">Send Message</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

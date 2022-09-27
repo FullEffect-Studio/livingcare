@@ -1,1 +1,72 @@
-<p>positive-behaviour works!</p>
+<div class="lg:pt-20 bg-base-200 ">
+  <section
+    class="bg-[url('/assets/images/about_header_bg1.jpg')] col-span-4 bg-cover bg-center relative"
+  >
+    <div class="px-8 lg:px-16 bg-black/50">
+      <div
+        class="text-4xl font-black font-sans text-white drop-shadow py-8 lg:py-32 text-center"
+      >
+        Positive Behavioural
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container px-8 mt-8 lg:mt-16 lg:px-16 md:mx-auto grid grid-cols-4 gap-16 pb-16">
+
+
+    <section class="col-span-4 lg:col-span-3 space-y-8">
+      <div class="bg-cover  bg-[url('/assets/images/about_edit.jpg')] h-120"></div>
+
+
+      <div class="space-y-4">
+        <p>Through our Positive Behaviour Support services, we specialise in supporting adults with autism, learning disabilities, mental health, and other conditions who sometimes display behaviours that other people may find challenging. The approach we take across all our community-based services is person-centered, educational, pro-active, and respectful, whilst encouraging individuals to be as independent and as safe as possible.</p>
+      </div>
+
+      <div class="space-y-4 grid grid-cols-3 gap-8">
+        <div class="col-span-3 font-bold font-black font-sans text-2xl">Our specialist positive behavioural services</div>
+        <div class="col-span-3 lg:col-span-2 space-y-4">
+          <div>Our specialists will assess the relationship between the behaviours that challenge and other aspects of the person’s life and environment, as well as working together with everyone associated with the individual. A personalised support plan is then developed with guidance for our staff teams to follow.</div>
+          <div>We take a person-centred approach so we can identify which areas of support will be most helpful to each individual, and will work with those that we support to ensure that their choices and goals are at the heart of everything that we do.</div>
+          <div>Our aim is to:</div>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Develop behaviour support programmes</li>
+            <li>Identify triggers for challenging behaviour</li>
+            <li>Improve someone’s quality of life</li>
+            <li>Model strategies and work with care and support teams to ensure best practice</li>
+            <li>Evaluate and review a person’s individual progress
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-3 lg:col-span-1">
+          <img class="hidden md:block" src="/assets/images/positive_be.jpg" alt="Autism">
+        </div>
+      </div>
+
+
+
+      <div class="bg-primary-focus flex justify-center items-center p-16 lg:px-32 lg:py-16">
+        <div>
+          <div class="text-2xl">My advice to other disabled people would be, concentrate on things your disability doesn’t prevent you from doing well and don’t regret the things it interferes with. Don’t be disabled in spirit as well as physically.</div>
+          <div class="text-white font-semibold uppercase mt-4">STEVEN HAWKING.</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="col-span-4 lg:col-span-1">
+      <div class="p-8 space-y-8 card w-full col-span-3 lg:col-span-1 shadow-xl" >
+        <div class="pl-4">
+          <div class="font-black text-3xl">Services</div>
+          <div class="w-10 border-t-4 mt-2 lg:mt-8  border-primary"></div>
+        </div>
+        <ul class="space-y-4 list-outside">
+          <li *ngFor="let service of services"  [routerLink]="service.link" class="flex items-center transition-all ease-in hover:text-primary cursor-pointer"><span class="fe fe-chevron-right font-bold text-lg text-primary"></span> <span class="font-semibold text-lg">{{service.label}}</span></li>
+        </ul>
+      </div>
+
+    </section>
+
+  </div>
+
+</div>

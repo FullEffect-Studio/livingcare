@@ -1,6 +1,7 @@
 @import "~ng-zorro-antd/style/index.min.css";
 @import "~ng-zorro-antd/carousel/style/index.min.css";
 @import "animate.css";
+@import "aos/dist/aos.css";
 
 @tailwind base;
 @tailwind components;
@@ -31,6 +32,10 @@
 }
 
 @layer base {
+  *{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
   *::-webkit-scrollbar {
     width: 0.25rem;
   }

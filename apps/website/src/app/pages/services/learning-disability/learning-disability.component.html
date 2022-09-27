@@ -1,1 +1,64 @@
-<p>learning-disability works!</p>
+<div class="lg:pt-20 bg-base-200 ">
+  <section
+    class="bg-[url('/assets/images/about_header_bg1.jpg')] col-span-4 bg-cover bg-center relative"
+  >
+    <div class="px-8 lg:px-16 bg-black/50">
+      <div
+        class="text-4xl font-black font-sans text-white drop-shadow py-8 lg:py-32 text-center"
+      >
+        Learning Disability
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container px-8 mt-8 lg:mt-16 lg:px-16 md:mx-auto grid grid-cols-4 gap-16 pb-16">
+
+
+    <section class="col-span-4 lg:col-span-3 space-y-8">
+      <div class="bg-cover bg-center bg-[url('/assets/images/learningdisability_edit.jpg')] h-120"></div>
+
+
+      <div class="space-y-4">
+        <p>Regardless of age or presumptive ability, we think that everyone can live a good life with favorable outcomes. Learning disability can however make a variety of daily activities and circumstances more difficult for affected persons and their families.</p>
+        <p>We put a lot of effort into getting to know people so that we can provide assistance that is as unique as they are. This includes learning how they prefer to be supported, what they hope to accomplish in life, and what matters to them.</p>
+      </div>
+
+      <div class="space-y-4 grid grid-cols-3 gap-8">
+        <div class="col-span-3 font-black font-sans font-bold text-2xl">Our specialist learning disability services</div>
+        <div class="col-span-3 lg:col-span-2 space-y-4">
+          <div>Each individual we support has an outcome-focused support plan that examines how we might collaborate to help them realize their goals. This could involve setting objectives for improving one's health, participating in the community, maintaining relationships with loved ones, and learning new skills.</div>
+          <div>We encourage and support people to complete household chores, go shopping, manage their finances, use neighbourhood amenities like recreation centres and libraries, and pursue their goals of furthering their education or finding employment.</div>
+        </div>
+        <div class="col-span-3 lg:col-span-1">
+          <img class="hidden md:block" src="/assets/images/learningdisability3.jpg" alt="Autism">
+        </div>
+      </div>
+
+      <div class="bg-primary-focus flex justify-center items-center p-16 lg:px-32 lg:py-16">
+        <div>
+          <div class="text-2xl">
+            People with learning disabilities learn differently, obviously. Does hat mean what they learn is wrong?
+          </div>
+          <div class="text-white font-semibold uppercase mt-4">JOANNE DUMM</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="col-span-4 lg:col-span-1">
+      <div class="p-8 space-y-8 card w-full col-span-3 lg:col-span-1 shadow-xl" >
+        <div class="pl-4">
+          <div class="font-black text-3xl">Services</div>
+          <div class="w-10 border-t-4 mt-2 lg:mt-8  border-primary"></div>
+        </div>
+        <ul class="space-y-4 list-outside">
+          <li *ngFor="let service of services" [routerLink]="service.link" class="flex items-center transition-all ease-in hover:text-primary cursor-pointer"><span class="fe fe-chevron-right font-bold text-lg text-primary"></span> <span class="font-semibold text-lg">{{service.label}}</span></li>
+        </ul>
+      </div>
+
+    </section>
+
+  </div>
+
+</div>

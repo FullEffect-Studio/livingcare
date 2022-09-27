@@ -4,14 +4,12 @@
     <img [src]="service.imageUrl" alt="Shoes" class="rounded-t-xl" />
   </figure>
   <div class="card-body m-0">
-    <h2 class="card-title text-xl mt-4 font-bold">{{ service.label }}</h2>
+    <h2 class="card-title text-xl mt-2 font-bold">{{ service.label }}</h2>
     <div class="text-base max-h-24">{{ service.summary }}</div>
     <div class="card-actions">
-      <div class="card-actions justify-start pt-8 items-center">
+      <div class="card-actions justify-start pt-2 items-center">
         <button
-          routerLink="/services/autism"
-          routerLinkActive="a"
-          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="service.link"
           class="btn btn-sm btn-primary btn-outline"
         >
           Read more <span class="fe fe-chevron-right"></span>
