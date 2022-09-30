@@ -64,7 +64,7 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     NzCarouselModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA20sB8VemHJcRLFDDKaLCK2lkfazkUCV0',
+      apiKey: 'AIzaSyAze9WYMNv5nRYIB8IKWBA7tzpScAmqnbA',
       libraries: ['places'],
     }),
   ],
