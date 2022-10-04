@@ -8,7 +8,7 @@
     "start": "nx serve website --hmr -o",
     "build": "nx build",
     "test": "nx test",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "firebase deploy --only=functions --fix "
   },
   "private": true,
   "dependencies": {
@@ -25,6 +25,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "daisyui": "^2.27.0",
+    "jsdom": "^20.0.1",
     "ng-zorro-antd": "^14.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
@@ -50,6 +51,7 @@
     "@nrwl/workspace": "14.7.5",
     "@types/aos": "^3.0.4",
     "@types/jest": "28.1.1",
+    "@types/jsdom": "^20.0.0",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
@@ -58,10 +60,12 @@
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-import": "^2.26.0",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "jest-preset-angular": "~12.2.2",
     "nx": "14.7.5",
+    "parse5": "^7.1.1",
     "postcss": "^8.4.16",
     "prettier": "^2.6.2",
     "tailwindcss": "^3.1.8",

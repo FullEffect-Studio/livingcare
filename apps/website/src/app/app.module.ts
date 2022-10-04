@@ -17,7 +17,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
@@ -31,6 +31,7 @@ import { HomeSliderViewComponent } from './components/home-slider-view/home-slid
 import { ValuesSliderViewComponent } from './components/values-slider-view/values-slider-view.component';
 import { ServiceVertCardViewComponent } from './components/service-vert-card-view/service-vert-card-view.component';
 import { ServiceHoriCardViewComponent } from './components/service-hori-card-view/service-hori-card-view.component';
+import {NzNotificationModule} from "ng-zorro-antd/notification";
 
 registerLocaleData(en);
 
@@ -55,19 +56,21 @@ registerLocaleData(en);
     ServiceVertCardViewComponent,
     ServiceHoriCardViewComponent,
   ],
-  imports: [
-    BrowserModule,
-    RoutingModule,
-    SharedModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    NzCarouselModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAze9WYMNv5nRYIB8IKWBA7tzpScAmqnbA',
-      libraries: ['places'],
-    }),
-  ],
+    imports: [
+        BrowserModule,
+        RoutingModule,
+        SharedModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        NzCarouselModule,
+        NzNotificationModule,
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyAze9WYMNv5nRYIB8IKWBA7tzpScAmqnbA',
+            libraries: ['places'],
+        }),
+        ReactiveFormsModule,
+    ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
 })
