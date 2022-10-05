@@ -37,7 +37,9 @@ export const helloWorld = functions.https.onRequest(async (request, response) =>
     let info = await transporter.sendMail({
       from: `${payload.name} | Customer Enquiry <support@livingcareservices.org>`,
       replyTo: payload.email,
-      to: "admin@livingcareservices.org",
+      to: "victoria.tetteh@livingcareservices.org",
+      cc: 'victor.ntiamoah@livingcareservices.org',
+      bcc: 'admin@livingcareservices.org',
       subject: payload.subject,
       text: payload.message,
       html: `<p>${payload.message}</p>`,

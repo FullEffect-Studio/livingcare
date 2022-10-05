@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
     console.log(payload)
     this.http.post('https://us-central1-yesapp-10da7.cloudfunctions.net/helloWorld', payload).subscribe(() => {
       this.form.reset()
-      this.notificationService.success('Your message has been received!', 'Our support team will contact you very soon via your email. Thank you')
+      this.notificationService.success('Your message has been received!', 'Our team will contact you very soon via your email. Thank you')
     }, error => this.notificationService.error('Ops! An error occurred', ''))
   }
 }
