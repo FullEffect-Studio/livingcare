@@ -1,0 +1,7 @@
+<ng-progress></ng-progress>
+<livingcare-header [showMobileMenu]="showMobileMenu" (toggle)="showMobileMenu = $event"></livingcare-header>
+<div class="z-0 pt-20 lg:pt-0">
+  <router-outlet></router-outlet>
+</div>
+<livingcare-mobile-menu [visible]="showMobileMenu" (visibilityChanged)="showMobileMenu = $event"></livingcare-mobile-menu>
+<livingcare-footer></livingcare-footer>

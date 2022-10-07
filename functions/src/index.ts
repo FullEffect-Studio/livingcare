@@ -1,5 +1,5 @@
 import * as functions from "firebase-functions";
-import { createTransport, getTestMessageUrl,} from "nodemailer";
+import { createTransport, getTestMessageUrl} from "nodemailer";
 
 import * as cors from 'cors';
 const corsHandler = cors({origin: true});
@@ -39,7 +39,7 @@ export const helloWorld = functions.https.onRequest(async (request, response) =>
       replyTo: payload.email,
       to: "victoria.tetteh@livingcareservices.org",
       cc: 'victor.ntiamoah@livingcareservices.org',
-      bcc: 'admin@livingcareservices.org',
+      bcc: 'duke.ababio@livingcareservices.org',
       subject: payload.subject,
       text: payload.message,
       html: `<p>${payload.message}</p>`,
