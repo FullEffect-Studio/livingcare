@@ -1,0 +1,92 @@
+@import "ng-zorro-antd/style/index.min.css";
+@import "ng-zorro-antd/carousel/style/index.min.css";
+@import "ng-zorro-antd/notification/style/index.min.css";
+@import "animate.css";
+@import "aos/dist/aos.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*//:root {*/
+/*//  --rounded-box: 1rem; !* border-radius for cards and other big elements *!*/
+/*//  --rounded-btn: 1.9rem; !* border-radius for buttons and similar elements *!*/
+/*//  --rounded-badge: 1.9rem; !* border-radius for badge and other small elements *!*/
+/*//*/
+/*//  --animation-btn: 0.25s; !* bounce animation time for button *!*/
+/*//  --animation-input: 0.2s; !* bounce animation time for checkbox, toggle, etc *!*/
+/*//*/
+/*//  --padding-card: 2rem; !* default card-body padding *!*/
+/*//*/
+/*//  --btn-text-case: uppercase; !* default text case for buttons *!*/
+/*//  --navbar-padding: 0.5rem; !* default padding for navbar *!*/
+/*//  --border-btn: 1px; !* default border size for button *!*/
+/*//  --border-color: var(--b3);*/
+/*//*/
+/*//  --transition-speed: 600ms;*/
+/*//}*/
+
+:root {
+  --animate-duration: 300ms;
+  --animate-delay: 2s;
+}
+
+@layer base {
+  *{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+  *::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #7f888d;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #BF7104;
+  }
+}
+
+@layer components {
+  .lc-active-link {
+    @apply border-b-4 border-primary font-bold;
+  }
+
+  .lc-active-mobile-link {
+    @apply font-bold;
+  }
+
+  .lc-links{
+    @apply h-8 hover:text-primary transition-all ease-out delay-100 cursor-pointer font-semibold text-black ;
+  }
+
+  .lc-mobile-links{
+    @apply hover:text-primary transition-all ease-out delay-100 cursor-pointer text-black py-4 font-bold;
+  }
+
+
+  .feature:hover  figure{
+    @apply scale-125 delay-100 transition-all ease-out;
+  }
+
+
+  .team-member:hover  .desc{
+    @apply block animate__animated animate__zoomIn ;
+  }
+
+  .team-member:hover  img{
+    @apply transition-all ease-in;
+  }
+
+  /*//.cta:hover {*/
+  /*//  @apply bg-primary animate__animated  animate__flipOutY animate__slower ;*/
+  /*//}*/
+
+
+}
+
+
+
